@@ -171,6 +171,34 @@
 			"rawModeData": "{\n    \"tier\": \"Unlimited\",\n    \"apiIdentifier\": \"{{apiId}}\",\n    \"applicationId\": \"{{applicationId}}\"\n}"
 		},
 		{
+			"id": "8bc35901-2c1d-d821-c41f-0b469a041685",
+			"headers": "Authorization: Bearer {{access_token_with_scope_subscribe}}\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer {{access_token_with_scope_subscribe}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{gatewayURL}}/api/am/store/applications/{{applicationId}}",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": "var jsonData = JSON.parse(responseBody);\n\nif(jsonData.keys.length === 0){\n  postman.setNextRequest(\"Generate Application Keys\");\n}else{\n    postman.setEnvironmentVariable(\"api_consumer_key\", jsonData.keys[0].consumerKey);\n    postman.setEnvironmentVariable(\"api_consumer_secret\", jsonData.keys[0].consumerSecret);\n    postman.setNextRequest(\"Generate Access Token\");\n}\n\n\n\n",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1521701936794,
+			"name": "Get Application Details",
+			"description": "",
+			"collectionId": "fc3a3128-d79d-131d-4e27-c9c6f1da1457",
+			"responses": []
+		},
+		{
 			"id": "a75a1697-98b0-4069-fd96-c31a8fcd6613",
 			"headers": "Authorization: Bearer {{access_token_with_scope_subscribe}}\nContent-Type: application/json\n",
 			"headerData": [
