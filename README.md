@@ -2,7 +2,7 @@
 
 ## Getting Started Guide.
 
-This example demonstrate a sample CI/CD pipeline for API Management using [WSO2 API Management](https://wso2.com/api-management/) solution combined with Travis CI and Newman.
+This example demonstrate a sample CI/CD pipeline for API Management using [WSO2 API Management](https://wso2.com/api-management/) solution combined with Travis CI and Newman
 
 ![](https://lh5.googleusercontent.com/dYoaXQQ7CyLGXjWo6YTZDzCUKQpyevq-UlYbzdFrMYLuSQG1J6A4vFZvc4TvPLqZC-4p_Zg7qlek9oo3wiQEdGlDbCCFj8YQpSlJq0rij5kK-_KhmcF7NzWXrBmeM3F3onw4PGpM)
 
